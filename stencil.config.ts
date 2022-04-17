@@ -1,7 +1,7 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
-  namespace: 'stencil-storybook-html',
+  namespace: 'the-a11y-collection--web-components',
   outputTargets: [
     {
       type: 'dist',

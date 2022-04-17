@@ -1,7 +1,7 @@
 {
-  "name": "stencil-storybook-html",
+  "name": "the-a11y-collection--web-components",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "A guide through fully accessible basic web components.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -9,7 +9,7 @@
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/stencil-storybook-html/stencil-storybook-html.esm.js",
+  "unpkg": "dist/the-a11y-collection--web-components/the-a11y-collection--web-components.esm.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ionic-team/stencil-component-starter.git"
