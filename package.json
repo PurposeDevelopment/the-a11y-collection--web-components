@@ -28,7 +28,8 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@stencil/core": "^2.13.0"
+    "@stencil/core": "^2.13.0",
+    "commitizen": "^4.2.4"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
@@ -38,9 +39,15 @@
     "@storybook/html": "^6.4.19",
     "@types/jest": "^27.0.3",
     "babel-loader": "^8.2.3",
+    "cz-conventional-changelog": "^3.3.0",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
     "puppeteer": "^10.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
