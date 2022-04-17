@@ -1,36 +1,36 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { MyComponent } from './my-component';
+import { TheA11yCta } from './the-a11y-cta';
 
-describe('my-component', () => {
+describe('the-a11y-cta', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
-      components: [MyComponent],
-      html: '<my-component></my-component>',
+      components: [TheA11yCta],
+      html: '<the-a11y-cta></the-a11y-cta>',
     });
     expect(root).toEqualHtml(`
-      <my-component>
+      <the-a11y-cta>
         <mock:shadow-root>
           <div>
             Hello, World! I'm
           </div>
         </mock:shadow-root>
-      </my-component>
+      </the-a11y-cta>
     `);
   });
 
   it('renders with values', async () => {
     const { root } = await newSpecPage({
-      components: [MyComponent],
-      html: `<my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>`,
+      components: [TheA11yCta],
+      html: `<the-a11y-cta first="Stencil" last="'Don't call me a framework' JS"></the-a11y-cta>`,
     });
     expect(root).toEqualHtml(`
-      <my-component first="Stencil" last="'Don't call me a framework' JS">
+      <the-a11y-cta first="Stencil" last="'Don't call me a framework' JS">
         <mock:shadow-root>
           <div>
             Hello, World! I'm Stencil 'Don't call me a framework' JS
           </div>
         </mock:shadow-root>
-      </my-component>
+      </the-a11y-cta>
     `);
   });
 });

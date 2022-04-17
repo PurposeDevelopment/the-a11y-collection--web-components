@@ -6,56 +6,56 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface TheA11yCta {
         /**
-          * The first name
+          * Label for the component.
          */
-        "first": string;
+        "label": string;
         /**
-          * The last name
+          * Target source in case of a link.
          */
-        "last": string;
+        "src"?: string;
         /**
-          * The middle name
+          * Target attribute for the link.
          */
-        "middle": string;
+        "target"?: string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLTheA11yCtaElement extends Components.TheA11yCta, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLTheA11yCtaElement: {
+        prototype: HTMLTheA11yCtaElement;
+        new (): HTMLTheA11yCtaElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "the-a11y-cta": HTMLTheA11yCtaElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface TheA11yCta {
         /**
-          * The first name
+          * Label for the component.
          */
-        "first"?: string;
+        "label"?: string;
         /**
-          * The last name
+          * Target source in case of a link.
          */
-        "last"?: string;
+        "src"?: string;
         /**
-          * The middle name
+          * Target attribute for the link.
          */
-        "middle"?: string;
+        "target"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "the-a11y-cta": TheA11yCta;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "the-a11y-cta": LocalJSX.TheA11yCta & JSXBase.HTMLAttributes<HTMLTheA11yCtaElement>;
         }
     }
 }
