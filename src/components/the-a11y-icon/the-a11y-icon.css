@@ -1,0 +1,9 @@
+:host {
+  display: block;
+  height: 24px;
+  width: 24px;
+}
+:host .icon-container {
+  height: 100%;
+  width: 100%;
+}
