@@ -1,0 +1,25 @@
+:host {
+  display: block;
+}
+
+:host button,
+:host a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  width: max-content;
+}
+
+:host the-a11y-icon {
+  width: 24px;
+  height: 24px;
+  min-width: calc(48px - 20px);
+  min-height: calc(48px - 20px);
+  flex: 1;
+}
+
+:host(.has-label) the-a11y-icon {
+  margin-right: 15px;
+}

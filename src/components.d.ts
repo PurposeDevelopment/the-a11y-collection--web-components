@@ -8,32 +8,13 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface TheA11yCta {
         /**
-          * Label for the component.
+          * Aria title which can be set if the button should not have a label.
          */
-        "label": string;
+        "ariaTitle"?: string;
         /**
-          * Target source in case of a link.
+          * String to generate random icon placed in front of or instead of the label.
          */
-        "src"?: string;
-        /**
-          * Target attribute for the link.
-         */
-        "target"?: string;
-    }
-}
-declare global {
-    interface HTMLTheA11yCtaElement extends Components.TheA11yCta, HTMLStencilElement {
-    }
-    var HTMLTheA11yCtaElement: {
-        prototype: HTMLTheA11yCtaElement;
-        new (): HTMLTheA11yCtaElement;
-    };
-    interface HTMLElementTagNameMap {
-        "the-a11y-cta": HTMLTheA11yCtaElement;
-    }
-}
-declare namespace LocalJSX {
-    interface TheA11yCta {
+        "icon"?: string;
         /**
           * Label for the component.
          */
@@ -45,10 +26,73 @@ declare namespace LocalJSX {
         /**
           * Target attribute for the link.
          */
-        "target"?: string;
+        "target": '_blank' | '_self';
+    }
+    interface TheA11yIcon {
+        /**
+          * title for the icon in case it does not have any label
+         */
+        "ariaTitle": string;
+        /**
+          * icon to be used
+         */
+        "icon": string;
+    }
+}
+declare global {
+    interface HTMLTheA11yCtaElement extends Components.TheA11yCta, HTMLStencilElement {
+    }
+    var HTMLTheA11yCtaElement: {
+        prototype: HTMLTheA11yCtaElement;
+        new (): HTMLTheA11yCtaElement;
+    };
+    interface HTMLTheA11yIconElement extends Components.TheA11yIcon, HTMLStencilElement {
+    }
+    var HTMLTheA11yIconElement: {
+        prototype: HTMLTheA11yIconElement;
+        new (): HTMLTheA11yIconElement;
+    };
+    interface HTMLElementTagNameMap {
+        "the-a11y-cta": HTMLTheA11yCtaElement;
+        "the-a11y-icon": HTMLTheA11yIconElement;
+    }
+}
+declare namespace LocalJSX {
+    interface TheA11yCta {
+        /**
+          * Aria title which can be set if the button should not have a label.
+         */
+        "ariaTitle"?: string;
+        /**
+          * String to generate random icon placed in front of or instead of the label.
+         */
+        "icon"?: string;
+        /**
+          * Label for the component.
+         */
+        "label"?: string;
+        /**
+          * Target source in case of a link.
+         */
+        "src"?: string;
+        /**
+          * Target attribute for the link.
+         */
+        "target"?: '_blank' | '_self';
+    }
+    interface TheA11yIcon {
+        /**
+          * title for the icon in case it does not have any label
+         */
+        "ariaTitle"?: string;
+        /**
+          * icon to be used
+         */
+        "icon"?: string;
     }
     interface IntrinsicElements {
         "the-a11y-cta": TheA11yCta;
+        "the-a11y-icon": TheA11yIcon;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +100,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "the-a11y-cta": LocalJSX.TheA11yCta & JSXBase.HTMLAttributes<HTMLTheA11yCtaElement>;
+            "the-a11y-icon": LocalJSX.TheA11yIcon & JSXBase.HTMLAttributes<HTMLTheA11yIconElement>;
         }
     }
 }

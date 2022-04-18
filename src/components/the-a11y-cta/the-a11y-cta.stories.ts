@@ -3,4 +3,4 @@ export default {
     title: 'Components/TheA11yCta',
 };
 
-export const configurable = () => `<the-a11y-cta label="The A11y Action Component" icon="Karl Baumhauer"></the-a11y-cta>`;
+export const configurable = () => `<the-a11y-cta label="The A11y Action Component" icon="Karl"></the-a11y-cta>`;
