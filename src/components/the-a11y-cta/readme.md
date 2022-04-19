@@ -1,4 +1,13 @@
-# the-a11y-cta
+## Description
+A fully accessible button/link component that converst from button to link and vice versa depending on the src property.
+
+### What makes it accessible?
+- native `<button>` and `<a>` element -> all build in accessibility features are supported
+  - focusable
+  - keyboard accessible
+  - mouse accessible
+- min-width and height fo 48px
+- manually controled aria-label in case of no label
 
 
 
