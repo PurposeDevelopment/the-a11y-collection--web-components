@@ -48,6 +48,12 @@ export class TheA11yCta {
       }}>
         <TagName
           href={this.src}
+          onClick={(e) => {
+            if (!this.src) {
+              e.preventDefault();
+              alert('The button has been fired.');
+            }
+          }}
           target={this.src ? this.target : undefined}
           aria-label={this.label || this.ariaTitle}
           title={!this.label ? this.ariaTitle : undefined}
